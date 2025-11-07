@@ -18,8 +18,8 @@ Visit the live website: [https://xdrog402.xyz](https://xdrog402.xyz)
 
 ### Prerequisites
 
+- Node.js 18+ and npm/yarn/pnpm
 - A modern web browser
-- A web server (for local development)
 
 ### Installation
 
@@ -29,58 +29,107 @@ git clone https://github.com/yourusername/xdrog402.xyz.git
 cd xdrog402.xyz
 ```
 
-2. Open `index.html` in your web browser or serve it using a local web server:
-
+2. Install dependencies:
 ```bash
-# Using Python
-python -m http.server 8000
-
-# Using Node.js (http-server)
-npx http-server
-
-# Using PHP
-php -S localhost:8000
+npm install
+# or
+yarn install
+# or
+pnpm install
 ```
 
-3. Navigate to `http://localhost:8000` in your browser
+3. Start the development server:
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+```
+
+4. Open [http://localhost:3000](http://localhost:3000) in your browser
+
+### Building for Production
+
+```bash
+npm run build
+# or
+yarn build
+# or
+pnpm build
+```
+
+The build output will be in the `dist/` directory.
+
+### Available Scripts
+
+- `npm run dev` - Start development server (runs on http://localhost:3000)
+- `npm run build` - Build for production
+- `npm run preview` - Preview production build locally
+- `npm run lint` - Run ESLint to check code quality
 
 ## 📁 Project Structure
 
 ```
 /
-├── index.html          # Main homepage
-├── docs.html           # Documentation page
-├── join.html           # Join coalition page
-├── live.html           # Live example page
-├── css/                # Stylesheets
-│   └── css.css
-├── images/             # Image assets
-│   ├── logo.png
-│   ├── preview.png
-│   └── ...
-├── font/               # Font files
-│   └── ttf/
-├── favicon/            # Favicon files
-├── cdn-cgi/            # CDN scripts
-├── netlify.toml        # Netlify configuration
-└── _redirects          # Redirect rules
+├── index.html              # HTML entry point
+├── package.json            # Dependencies and scripts
+├── vite.config.js          # Vite configuration
+├── tailwind.config.js      # Tailwind CSS configuration
+├── postcss.config.js       # PostCSS configuration
+├── .eslintrc.cjs           # ESLint configuration
+├── public/                 # Static assets
+│   └── logo.PNG
+└── src/                    # Source code
+    ├── main.jsx            # Application entry point
+    ├── App.jsx             # Main app component with routing
+    ├── App.css             # App-specific styles
+    ├── index.css           # Global styles and Tailwind imports
+    ├── components/         # Reusable React components
+    │   ├── Button.jsx      # Button component with variants
+    │   ├── Header.jsx      # Navigation header
+    │   ├── Hero.jsx        # Hero section with GSAP animations
+    │   ├── Logo.jsx        # Logo component
+    │   ├── ContractAddress.jsx  # Contract address display
+    │   └── Section.jsx     # Section wrapper component
+    ├── pages/              # Page components
+    │   ├── Home.jsx        # Homepage
+    │   ├── Docs.jsx        # Documentation page
+    │   ├── Join.jsx        # Join coalition page
+    │   └── Live.jsx        # Live example page
+    ├── hooks/              # Custom React hooks
+    │   └── useGSAP.js      # GSAP animation hook
+    ├── utils/              # Utility functions
+    │   └── copyToClipboard.js  # Clipboard utility
+    └── constants/          # App constants
+        └── index.js        # Constants and configuration
 ```
 
 ## 🛠️ Technologies Used
 
-- **HTML5**: Structure and content
-- **CSS3**: Styling and animations
-- **JavaScript**: Interactive functionality
+- **React 18**: UI library with hooks
+- **React Router**: Client-side routing
+- **Vite**: Build tool and development server
 - **GSAP**: Animation library (ScrollTrigger, ScrollToPlugin, SplitText, ScrambleTextPlugin)
 - **Tailwind CSS**: Utility-first CSS framework
-- **Netlify**: Hosting and deployment
+- **JavaScript (ES6+)**: Modern JavaScript features
+- **ESLint**: Code linting and quality
 
 ## 📝 Pages
 
-- **Homepage** (`index.html`): Main landing page with protocol overview
-- **Documentation** (`docs.html`): Technical documentation
-- **Join** (`join.html`): Join the coalition page
-- **Live Example** (`live.html`): Interactive live demonstration
+- **Homepage** (`src/pages/Home.jsx`): Main landing page with protocol overview
+- **Documentation** (`src/pages/Docs.jsx`): Technical documentation
+- **Join** (`src/pages/Join.jsx`): Join the coalition page
+- **Live Example** (`src/pages/Live.jsx`): Interactive live demonstration
+
+## 🧩 Components
+
+- **Header** (`src/components/Header.jsx`): Navigation header with logo and menu
+- **Hero** (`src/components/Hero.jsx`): Hero section with GSAP animations
+- **Button** (`src/components/Button.jsx`): Reusable button component with variants
+- **ContractAddress** (`src/components/ContractAddress.jsx`): Contract address display with copy functionality
+- **Logo** (`src/components/Logo.jsx`): Logo component
+- **Section** (`src/components/Section.jsx`): Section wrapper component
 
 ## 🔗 Important Links
 
