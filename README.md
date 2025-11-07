@@ -25,8 +25,8 @@ Visit the live website: [https://xdrog402.xyz](https://xdrog402.xyz)
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/xdrog402.xyz.git
-cd xdrog402.xyz
+git clone https://github.com/xDrog402/xDrog402.git
+cd xdrog402
 ```
 
 2. Install dependencies:
