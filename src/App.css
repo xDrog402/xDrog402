@@ -1,0 +1,26 @@
+/* Additional app-specific styles */
+
+.top-section {
+  background-color: #fbfbff;
+}
+
+.top-title {
+  font-size: 140px;
+  letter-spacing: -4px;
+  line-height: 140px;
+}
+
+@media (max-width: 768px) {
+  .top-title {
+    font-size: 60px;
+    letter-spacing: -2px;
+    line-height: 70px;
+  }
+}
+
+.top-scroll-down {
+  color: rgba(88, 104, 113, 1);
+  font-size: 24px;
+  font-family: 'Inter', sans-serif;
+}
+
